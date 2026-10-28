@@ -11,7 +11,7 @@ def show_names():
         print(pokemon["name"]["english"])
 
 # Add a language choice feature and print the pokemons name based on the user input
-def language():
+def choose_language():
     print("Choose a language:")
     print("1 English")
     print("2 Japanese")
@@ -19,13 +19,14 @@ def language():
     print("4 French")
 x = int(input("Choose a language:"))
 if x == 1:
-    a
+    language = "english"
 elif x == 2:
-    b
+    language = "japanese"
 elif x == 3:
-    c
+    language = "chinese"
 elif x == 4:
-    d
+    language = "french"
+show_names(language)
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
