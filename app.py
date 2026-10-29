@@ -16,6 +16,7 @@ print("1 English")
 print("2 Japanese")
 print("3 Chinese")
 x = int(input("Choose a language:"))
+language = ""
 if x == 1:
     language = "english"
 elif x == 2:
