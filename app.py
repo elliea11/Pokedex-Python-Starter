@@ -27,6 +27,32 @@ show_names(language)
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
+def find_type():
+    types = []
+
+    for pokemon in data:
+        for pokemon_type in pokemon["type"]:
+            if pokemon_type not in types:
+                types.append(pokemon_type)
+
+    print("Pokemon types:")
+    for pokemon_type in types:
+        print(pokemon_type)
+
+    choice = input("Enter a Pokemon type: ").strip().lower()
+    found = False
+
+    for pokemon in data:
+        for pokemon_type in pokemon["type"]:
+            if pokemon_type.lower() == choice:
+                print(pokemon["name"]["english"])
+                found = True
+                break
+
+    if found == False:
+        print("No Pokemon were found with that type.")
+
+
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 
