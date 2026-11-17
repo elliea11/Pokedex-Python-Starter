@@ -95,8 +95,8 @@ def find_moves():
     print("Moves with matching types:")
 
     found = False
-#for move in moves_data:
-    for move in find_moves:
+
+    for move in moves_data:
         if move["type"] in pokemon_types:
             print(move["ename"], "-", move["type"])
             found = True
@@ -105,3 +105,4 @@ def find_moves():
         print("No matching moves were found.")
 
 find_moves()
+
