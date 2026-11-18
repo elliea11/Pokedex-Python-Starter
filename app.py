@@ -74,6 +74,10 @@ if found == False:
 
 #Based on user input, show all moves that a pokemon could learn based on their type. For example, if Charizard is fire/flying, show all fire and flying moves. HINT import the moves.json file too!
 
+moves_file = open("moves.json", encoding="utf8")
+moves = json.load(moves_file)
+moves_file.close()
+
 def find_moves():
     search = input("Enter a Pokemon's name: ").strip().lower()
     chosen_pokemon = None
@@ -96,7 +100,7 @@ def find_moves():
 
     found = False
 
-    for move in moves_data:
+    for move in moves:
         if move["type"] in pokemon_types:
             print(move["ename"], "-", move["type"])
             found = True
